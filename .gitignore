@@ -104,3 +104,5 @@ __pycache__/
 data/
 test/
 pytorch-ssim/
+output/
+checkpoints/

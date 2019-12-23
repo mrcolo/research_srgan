@@ -190,6 +190,11 @@ if __name__ == "__main__":
         sys.stdout.write('\r[%d/%d][%d/%d] Discriminator_Loss: %.4f Generator_Loss (Content/Advers/Total): %.4f/%.4f/%.4f\n' % (epoch, opt.nEpochs, i, len(dataloader),
         mean_discriminator_loss/len(dataloader), mean_generator_content_loss/len(dataloader), 
         mean_generator_adversarial_loss/len(dataloader), mean_generator_total_loss/len(dataloader)))
+        
+        writer.add_scalar('generator_total_loss', mean_generator_total_loss/len(dataloader), epoch)
+        writer.add_scalar('generator_adversarial_loss', mean_generator_adversarial_loss/len(dataloader), epoch)
+        writer.add_scalar('generator_content_loss', mean_generator_content_loss/len(dataloader), epoch)
+        writer.add_scalar('discriminator_loss', mean_discriminator_loss/len(dataloader), epoch)
 
         # Do checkpointing
         torch.save(generator.state_dict(), '%s/generator_final.pth' % opt.out)

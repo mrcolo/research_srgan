@@ -58,7 +58,7 @@ if __name__ == '__main__':
 
     generator = Generator(opt.resBlocks, opt.upSampling)
     generator = nn.DataParallel(generator).to(device)
-    generator.load_state_dict(torch.load("./checkpoints/generator_final.pth"))
+    generator.load_state_dict(torch.load("./checkpoints/generator_final.pth", map_location=device))
 
     content_criterion = nn.MSELoss()
     content_criterion.to(device)
