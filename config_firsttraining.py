@@ -6,7 +6,7 @@ class Config():
         self.imageSize = 110
         self.upSampling = 4
         self.nEpochs = 50
-        self.generatorPretrainEpochs = 3
+        self.generatorPretrainEpochs = 4
         self.generatorLR = 0.0001
         self.discriminatorLR = 0.0001
         self.nGPU = 1
