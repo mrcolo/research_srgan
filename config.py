@@ -3,7 +3,7 @@ class Config():
         self.dataroot = ""
         self.workers = 4
         self.batchSize = 8
-        self.imageSize = 110
+        self.imageSize = 128
         self.upSampling = 4
         self.nEpochs = 50
         self.generatorPretrainEpochs = 3
