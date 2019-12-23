@@ -5,7 +5,7 @@ class Config():
         self.batchSize = 8
         self.imageSize = 128
         self.upSampling = 4
-        self.nEpochs = 50
+        self.nEpochs = 100
         self.generatorPretrainEpochs = 3
         self.generatorLR = 0.0001
         self.discriminatorLR = 0.0001
